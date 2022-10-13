@@ -15,6 +15,7 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    e.target.reset()
     if (search) {
       navigate(`/search/${search}`)
       setSearch("")
@@ -39,6 +40,7 @@ const SearchBar = () => {
         label="Search"
         onChange={(e) => onChangeSearch(e)}
         style={{ Width: "20rem", height: "3rem" }}
+        required
       />
       <IconButton
         aria-label="search"
