@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchAPI } from "../utils/fetchAPI"
 import ChannelCard from "./ChannelCard"
+import Videos from "./Videos"
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null)
@@ -29,8 +30,13 @@ const ChannelDetail = () => {
             zIndex: 10,
           }}
         />
+        <ChannelCard channelDetail={channelDetail} marginTop="-93px" />
       </Box>
-      <ChannelCard channelDetail={channelDetail} />
+
+      <Box display="flex" p="2">
+        <Box sx={{ mr: { sm: "100px" } }} />
+        <Videos videos={videos} />
+      </Box>
     </Box>
   )
 }
