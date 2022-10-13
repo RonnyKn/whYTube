@@ -1,15 +1,13 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material"
+import { Card, CardContent, CardMedia, Typography } from "@mui/material"
 import React from "react"
 import { Link } from "react-router-dom"
 import { CheckCircle } from "@mui/icons-material"
 
 import {
-  demoThumbnailUrl,
   demoChannelUrl,
   demoVideoUrl,
   demoChannelTitle,
   demoVideoTitle,
-  demoProfilePicture,
 } from "../utils/constant"
 const VideoCard = ({
   video: {
